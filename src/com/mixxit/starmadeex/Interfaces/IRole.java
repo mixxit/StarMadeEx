@@ -9,5 +9,5 @@ public interface IRole {
 	public RoleType getRoleType();
 	public void setRoleType (RoleType roletype);
 
-
+	
 }

@@ -5,7 +5,9 @@ import org.schema.game.common.data.player.PlayerState;
 import org.schema.game.mod.listeners.PlayerStateListener;
 import org.schema.schine.network.objects.Sendable;
 
+import com.mixxit.starmadeex.Player;
 import com.mixxit.starmadeex.StarMadeExManager;
+import com.mixxit.starmadeex.Factories.RoleFactory;
 
 import obfuscated.Nv;
 import obfuscated.Tt;
@@ -14,6 +16,7 @@ import obfuscated.gg;
 
 public class PlayerStateListenerEx implements PlayerStateListener
 {
+	
 	StarMadeExManager manager;
 
 	public PlayerStateListenerEx(StarMadeExManager starMadeExManager) {
@@ -45,8 +48,10 @@ public class PlayerStateListenerEx implements PlayerStateListener
 	}
 
 	@Override
-	public void onPlayerRemoved(PlayerState arg0) {
+	public void onPlayerRemoved(PlayerState playerstate) {
 		// TODO Auto-generated method stub
+		System.out.println("[STARMADEEX] Player removed : " + playerstate.getName());
+		manager.UnregisterPlayerState(playerstate);
 		
 	}
 
@@ -57,8 +62,12 @@ public class PlayerStateListenerEx implements PlayerStateListener
 	}
 
 	@Override
-	public void onPlayerSpawned(PlayerState arg0, Tt arg1) {
+	public void onPlayerSpawned(PlayerState playerstate, Tt arg1) {
 		// TODO Auto-generated method stub
+		System.out.println("[STARMADEEX] Player Spawned : " + playerstate.getName());
+		Player player = new Player(playerstate.getClientId(), playerstate.getName(), RoleFactory.CreateRole(RoleFactory.GetRandomRoleType()));
+		player.setPlayerState(playerstate);
+		manager.RegisterPlayer(player);
 		
 	}
 

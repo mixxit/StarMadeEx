@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 Class-Path: .
-Main-Class: com.mixxit.startmadeex.StarMadeEx
+Main-Class: com.mixxit.starmadeex.StarMadeEx
 
