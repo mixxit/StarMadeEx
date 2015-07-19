@@ -1,0 +1,13 @@
+<aspectj>
+  <aspects>
+    <aspect name="com.mixxit.starmadeex.Aspects.ControllerStateAspect"/>
+    <aspect name="com.mixxit.starmadeex.Aspects.ModManagerAspect"/>
+    <aspect name="com.mixxit.starmadeex.Aspects.PlayerStateAspect"/>
+    <aspect name="com.mixxit.starmadeex.Aspects.GameServerControllerAspect"/>
+    <aspect name="com.mixxit.starmadeex.Aspects.TtAspect"/>
+  </aspects>
+  <weaver options="-Xset:weaveJavaxPackages=true -Xset:weaveJavaPackages=true">
+    <include within="org.schema..*"/>
+    <include within="obfuscated..*"/>
+  </weaver>
+</aspectj>

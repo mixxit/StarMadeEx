@@ -17,23 +17,19 @@ import com.mixxit.starmadeex.Roles.RoleChiefEngineer;
 import com.mixxit.starmadeex.Roles.RoleChiefMedicalOfficer;
 import com.mixxit.starmadeex.Roles.RoleClown;
 import com.mixxit.starmadeex.Roles.RoleDetective;
-import com.mixxit.starmadeex.Roles.RoleHeadOfCommerce;
 import com.mixxit.starmadeex.Roles.RoleHeadOfPersonnel;
 import com.mixxit.starmadeex.Roles.RoleHeadOfSecurity;
 import com.mixxit.starmadeex.Roles.RoleJanitor;
 import com.mixxit.starmadeex.Roles.RoleLawyer;
-import com.mixxit.starmadeex.Roles.RoleLibrarian;
 import com.mixxit.starmadeex.Roles.RoleMedicalDoctor;
 import com.mixxit.starmadeex.Roles.RoleMime;
 import com.mixxit.starmadeex.Roles.RoleMiner;
 import com.mixxit.starmadeex.Roles.RolePilot;
 import com.mixxit.starmadeex.Roles.RoleQuarterMaster;
 import com.mixxit.starmadeex.Roles.RoleResearchDirector;
-import com.mixxit.starmadeex.Roles.RoleRoboticist;
 import com.mixxit.starmadeex.Roles.RoleScientist;
 import com.mixxit.starmadeex.Roles.RoleSecurityOfficer;
 import com.mixxit.starmadeex.Roles.RoleStationEngineer;
-import com.mixxit.starmadeex.Roles.RoleTrader;
 import com.mixxit.starmadeex.Roles.RoleWarden;
 
 public class RoleFactory {
@@ -80,9 +76,6 @@ public class RoleFactory {
 			case DETECTIVE:
 				role = new RoleDetective();
 				break;
-			case HEADOFCOMMERCE:
-				role = new RoleHeadOfCommerce();
-				break;
 			case HEADOFPERSONNEL:
 				role = new RoleHeadOfPersonnel();
 				break;
@@ -94,9 +87,6 @@ public class RoleFactory {
 				break;
 			case LAWYER:
 				role = new RoleLawyer();
-				break;
-			case LIBRARIAN:
-				role = new RoleLibrarian();
 				break;
 			case MEDICALDOCTOR:
 				role = new RoleMedicalDoctor();
@@ -116,9 +106,6 @@ public class RoleFactory {
 			case RESEARCHDIRECTOR:
 				role = new RoleResearchDirector();
 				break;
-			case ROBOTICIST:
-				role = new RoleRoboticist();
-				break;
 			case SCIENTIST:
 				role = new RoleScientist();
 				break;
@@ -127,9 +114,6 @@ public class RoleFactory {
 				break;
 			case STATIONENGINEER:
 				role = new RoleStationEngineer();
-				break;
-			case TRADER:
-				role = new RoleTrader();
 				break;
 			case WARDEN:
 				role = new RoleWarden();
